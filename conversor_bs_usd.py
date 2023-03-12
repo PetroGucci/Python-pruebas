@@ -1,10 +1,10 @@
 def conversor(nombre_moneda,valor_dolar):
     tasa=float(input("Cuantos "+nombre_moneda+" tienes? "))
-    if nombre_moneda=="Bolivares":
+    if option==1:
         dolares=round(tasa/valor_dolar,2)
         dolares=str(dolares)
         print("Tienes $"+dolares+" Dolares")
-    elif nombre_moneda=="Dolares":
+    elif option==2:
         dolares=round(tasa*valor_dolar,2)
         dolares=str(dolares)
         print("Tienes "+dolares+" Bolivares")
