@@ -21,8 +21,8 @@ ingrese de que moneda desea convertir
 option=int(input(menu))
 
 if option==1:
-    conversor("Bolivares", 24.15)
+    conversor("Bs", 24.15)
 elif option==2:
-    conversor("Dolares",24.15)
+    conversor("USD",24.15)
 else:
     print("ingresa un valor correcto, por favor")
