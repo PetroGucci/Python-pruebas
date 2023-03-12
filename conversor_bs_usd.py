@@ -1,3 +1,14 @@
+def conversor(nombre_moneda,valor_dolar):
+    tasa=float(input("Cuantos "+nombre_moneda+" tienes? "))
+    if nombre_moneda=="Bolivares":
+        dolares=round(tasa/valor_dolar,2)
+        dolares=str(dolares)
+        print("Tienes $"+dolares+" Dolares")
+    elif nombre_moneda=="Dolares":
+        dolares=round(tasa*valor_dolar,2)
+        dolares=str(dolares)
+        print("Tienes "+dolares+" Bolivares")
+
 menu="""
 Bienvenido al sistema de conversor de moneda de BS a USD
 ingrese de que moneda desea convertir
@@ -10,16 +21,8 @@ ingrese de que moneda desea convertir
 option=int(input(menu))
 
 if option==1:
-    bolivares=float(input("Cuantos bolivares tiene? "))
-    valor_dolar=24.15
-    dolares=round(bolivares/valor_dolar,2)
-    dolares=str(dolares)
-    print("Tienes $"+dolares+" Dolares")
+    conversor("Bolivares", 24.15)
 elif option==2:
-    dolares=float(input("Cuantos dolares tiene? "))
-    valor_bs=24.15
-    bolivares=round(dolares*valor_bs)
-    bolivares=str(bolivares)
-    print("Tienes "+bolivares+" Bolivares")
+    conversor("Dolares",24.15)
 else:
     print("ingresa un valor correcto, por favor")
